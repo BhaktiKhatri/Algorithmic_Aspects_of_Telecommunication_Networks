@@ -1,0 +1,104 @@
+Project 2
+The theme of the project is to study experimentally how the network reli-
+ability depends on the individual link reliabilities, in the specic situation
+described below.
+Network topology: A complete undirected graph on n = 5 nodes. Com-
+plete means that every node is connected with every other one (parallel edges
+and self-loops are excluded in this graph). Therefore, this graph has m = 10
+edges, representing the links of the network.
+Components that may fail: The links of the network may fail, the nodes
+are always up. The reliability of the links is computed as follows. Index
+the links with the numbers 1,...,10 (in arbitrary order). Take a parameter
+p, 0  p  1, the same for every link. The parameter p will take dierent
+values in the experiments. For link i, (i = 1; 2; : : : ; 10), let its reliability be
+pi, which is given by the following formula
+pi = pddi=3e;
+where di is the ith digit in your 10-digit student ID, assuming the ID consists
+of the digits d1; d2; : : : ; d10. The d:::e sign means upper integer part, which
+rounds up any non-integer number to the nearest larger integer. For example,
+if your ID is 0123456789, then link 5 has reliability p5 = pdd5=3e = pd4=3e = p2,
+and link 1 has reliability p1 = pdd1=3e = p0 = 1.
+Reliability conguration: The system is considered operational, if the
+network is connected.
+Specic tasks:
+1. Create an algorithm to compute the network reliability in the above
+described situation, using the method of exhaustive enumeration (see
+in the Lecture Notes). Note that the high level description given in the
+notes is not enough, since you also have to specify how you actually
+want to nd the details, such as how to generate the possible states,
+how to assign an up/down system condition to each, how to convert it
+into a reliability value, etc.
+1
+IMPORTANT: Finding algorithmic solutions for these details
+is part of the task!
+Describe how your algorithm works. First brie
+y explain informally the
+ideas. Then provide pseudo code for the description of the algorithm,
+with sucient comments to make them readable and understandable
+by a human.
+2. Write a computer program that implements the algorithm. You may
+use any programming language under any operating system, this is
+entirely of your choice. Make sure, however, that your program is well
+structured to support nding potential errors (debugging), checking
+correctness or trying out algorithm changes. Explain how your program
+supports these goals. Include a section that tells how to run your
+program (this is usually called ReadMe le).
+3. Run the program for dierent values of p. Let the parameter p run over
+the [0:05; 1] interval, in steps of 0.05. Show graphically in a diagram
+how the obtained network reliability values depend on p.
+4. Now x the p parameter at p = 0:9, and do the following experiment.
+Among the 210 = 1024 possible combinations of component states pick
+k of the combinations randomly, and 
+ip the corresponding system
+condition. That is, if the system was up, change it to down, if it was
+down, change it to up. This models the situation that there are some
+random errors in the computation. Show in a diagram, how the re-
+liability of the system changes due to this alteration. With this we
+want to investigate how the result depends on random errors. Specif-
+ically, show in a diagram how the change depends on k, in the range
+k = 0; 1; 2; 3; : : : ; 20: During this experiment keep the value of the pa-
+rameter p xed at p = 0:9. To reduce the eect of randomness, run
+several experiments for each value of k, and average them out,
+5. Provide a short (1-2 paragraph) explanation why the obtained diagrams
+look the way they look. In other words, try to argue that they exhibit
+a reasonable behavior that one could intuitively expect, so the program
+is likely to work correctly.
+2
+Note: If something is not specied in this project description, that means it
+is left to your choice.
+Submission guidelines
+Describe everything, including algorithms, program, sources, results and g-
+ures neatly and clearly in a study. Include everything in a single document
+that can be read as a report. It should have a professional appearance,
+scanned handwriting is not acceptable! The preferred le type is pdf. Do
+not submit executable code, but include the source code as an Appendix in
+the document. The project report will be read as a document and not run
+as a program (but there are two exceptions, see them under Evaluation).
+Submit the document through eLearning. Do not send it via e-mail!
+Notes:
+ The work should be fully individual and original. Any form of cheating
+is a serious violation of University policies and can lead to serious con-
+sequences. Also note that while there were similar projects in earlier
+semesters, the exact same project has never been assigned. The minor
+dierences between this and earlier similar projects make it easy to
+detect if a submission is copied from an earlier one.
+ It may be helpful to think about the whole project presentation that
+your task is not only to solve a technical problem, but you also have
+to \sell" the results. Try to look at your work from the viewpoint of a
+potential customer, to whom you want to sell such a software product.
+How convincing would your presentation look for a customer?
+Evaluation
+The evaluation will focus on how well each of the specic tasks have been
+carried out. Even though the submission will not be run, only read as a
+document, there are two exceptions. You will be asked to demonstrate on
+a computer how your program actually runs, if any of the following cases
+occur:
+3
+1. You do not agree with the grade and want to improve it. In this case
+the demonstration should show that your work is actually better than
+the received grade.
+2. There is suspicion that the work is not original or not individually done
+or the results were not produced by your own correctly running pro-
+gram. In this case a demonstration is required to clarify the situation
+and to receive any score.
+4
